@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-03-26T17:44:48+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Your Site Title</title><subtitle>Your Site Description
+</subtitle><author><name>Your Name</name></author><entry><title type="html">Mac OS 10.15.3 无法删除根目录文件的处理方法</title><link href="http://localhost:4000/2020/03/26/MacOS%E6%97%A0%E6%B3%95%E5%88%A0%E9%99%A4%E6%A0%B9%E7%9B%AE%E5%BD%95%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86%E6%96%B9%E6%B3%95.html" rel="alternate" type="text/html" title="Mac OS 10.15.3 无法删除根目录文件的处理方法" /><published>2020-03-26T00:00:00+08:00</published><updated>2020-03-26T00:00:00+08:00</updated><id>http://localhost:4000/2020/03/26/MacOS%E6%97%A0%E6%B3%95%E5%88%A0%E9%99%A4%E6%A0%B9%E7%9B%AE%E5%BD%95%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86%E6%96%B9%E6%B3%95</id><content type="html" xml:base="http://localhost:4000/2020/03/26/MacOS%E6%97%A0%E6%B3%95%E5%88%A0%E9%99%A4%E6%A0%B9%E7%9B%AE%E5%BD%95%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86%E6%96%B9%E6%B3%95.html">&lt;h3 id=&quot;mac-os-10153-无法删除根目录文件的处理方法&quot;&gt;Mac OS 10.15.3 无法删除根目录文件的处理方法&lt;/h3&gt;
+
+&lt;h4 id=&quot;不能删除原因&quot;&gt;不能删除原因&lt;/h4&gt;
+&lt;p&gt;主要原因是升级为Catalina系统后，很多文件或者应用写权限被锁，且有一个系统保护，SIP（system integrity protection）。&lt;/p&gt;
+
+&lt;h4 id=&quot;解决方案&quot;&gt;解决方案&lt;/h4&gt;
+&lt;p&gt;解决方法如下：&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;开启root账户，设定root账户密码，方法自行百度。&lt;/li&gt;
+  &lt;li&gt;进入到急救模式，在“实用工具”中的“终端”中输入 命令：csrutil disable。此命令用于解除系统保护，SIP（system integrity protection）。&lt;/li&gt;
+  &lt;li&gt;正常启动进入root账户，终端中输入命令：sudo mount -uw /。此命令用于解除全盘文件的写保护权限。&lt;/li&gt;
+  &lt;li&gt;直接在终端通过命令：rm -rf ，此命令可以删除文件及文件夹。&lt;/li&gt;
+  &lt;li&gt;重启后系统会自动恢复原来的保护状态，若不需要，可以再把root账户删掉。 &lt;/li&gt;
+  &lt;li&gt;有个ppleinternal的文件夹，实在不知道干嘛的，还删不掉。可以终端输入sudo chflags hidden /AppleInternal来隐藏它。&lt;/li&gt;
+&lt;/ol&gt;</content><author><name>Your Name</name></author><category term="黑果" /><category term="声卡" /><summary type="html">Mac OS 10.15.3 无法删除根目录文件的处理方法 不能删除原因 主要原因是升级为Catalina系统后，很多文件或者应用写权限被锁，且有一个系统保护，SIP（system integrity protection）。 解决方案 解决方法如下： 开启root账户，设定root账户密码，方法自行百度。 进入到急救模式，在“实用工具”中的“终端”中输入 命令：csrutil disable。此命令用于解除系统保护，SIP（system integrity protection）。 正常启动进入root账户，终端中输入命令：sudo mount -uw /。此命令用于解除全盘文件的写保护权限。 直接在终端通过命令：rm -rf ，此命令可以删除文件及文件夹。 重启后系统会自动恢复原来的保护状态，若不需要，可以再把root账户删掉。  有个ppleinternal的文件夹，实在不知道干嘛的，还删不掉。可以终端输入sudo chflags hidden /AppleInternal来隐藏它。</summary></entry><entry><title type="html">黑果升级系统至10.15.4导致声卡无法驱动</title><link href="http://localhost:4000/2020/03/26/%E5%8D%87%E7%BA%A7%E7%B3%BB%E7%BB%9F%E8%87%B310.15.4%E5%AF%BC%E8%87%B4%E5%A3%B0%E5%8D%A1%E6%97%A0%E6%B3%95%E9%A9%B1%E5%8A%A8.html" rel="alternate" type="text/html" title="黑果升级系统至10.15.4导致声卡无法驱动" /><published>2020-03-26T00:00:00+08:00</published><updated>2020-03-26T00:00:00+08:00</updated><id>http://localhost:4000/2020/03/26/%E5%8D%87%E7%BA%A7%E7%B3%BB%E7%BB%9F%E8%87%B310.15.4%E5%AF%BC%E8%87%B4%E5%A3%B0%E5%8D%A1%E6%97%A0%E6%B3%95%E9%A9%B1%E5%8A%A8</id><content type="html" xml:base="http://localhost:4000/2020/03/26/%E5%8D%87%E7%BA%A7%E7%B3%BB%E7%BB%9F%E8%87%B310.15.4%E5%AF%BC%E8%87%B4%E5%A3%B0%E5%8D%A1%E6%97%A0%E6%B3%95%E9%A9%B1%E5%8A%A8.html">&lt;h3 id=&quot;黑果升级系统至10154导致声卡无法驱动&quot;&gt;黑果升级系统至10.15.4导致声卡无法驱动&lt;/h3&gt;
+
+&lt;h4 id=&quot;applealckext无法成功驱动&quot;&gt;AppleALc.kext无法成功驱动&lt;/h4&gt;
+&lt;p&gt;尝试用AppleALc.kext驱动，试过所有layout id，均未能驱动。&lt;/p&gt;
+
+&lt;h4 id=&quot;v00d00hda292无法成功驱动&quot;&gt;V00d00HDA2.9.2无法成功驱动&lt;/h4&gt;
+&lt;p&gt;安装V00d00HDA2.9.2clover-V15，方式采用第三种方式，直接安装到系统，并屏蔽系统的自带驱动。&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Install ➤ VoodooHDA.kext, AppleHDADisabler.kext /System/Library/Extensions&lt;/li&gt;
+  &lt;li&gt;Install ➤ VoodooHDA.prefPane /Library/PreferencePanes&lt;/li&gt;
+  &lt;li&gt;Install ➤ getdump /usr/local/bin/getdump BackUp ➤ Origin /Desktop/AppleHDA.kext&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Your Name</name></author><category term="黑果" /><category term="声卡" /><summary type="html">黑果升级系统至10.15.4导致声卡无法驱动 AppleALc.kext无法成功驱动 尝试用AppleALc.kext驱动，试过所有layout id，均未能驱动。 V00d00HDA2.9.2无法成功驱动 安装V00d00HDA2.9.2clover-V15，方式采用第三种方式，直接安装到系统，并屏蔽系统的自带驱动。 Install ➤ VoodooHDA.kext, AppleHDADisabler.kext /System/Library/Extensions Install ➤ VoodooHDA.prefPane /Library/PreferencePanes Install ➤ getdump /usr/local/bin/getdump BackUp ➤ Origin /Desktop/AppleHDA.kext</summary></entry><entry><title type="html">黑果的蓝牙解决方案</title><link href="http://localhost:4000/2020/03/26/%E9%BB%91%E6%9E%9C%E7%9A%84%E8%93%9D%E7%89%99%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88.html" rel="alternate" type="text/html" title="黑果的蓝牙解决方案" /><published>2020-03-26T00:00:00+08:00</published><updated>2020-03-26T00:00:00+08:00</updated><id>http://localhost:4000/2020/03/26/%E9%BB%91%E6%9E%9C%E7%9A%84%E8%93%9D%E7%89%99%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88</id><content type="html" xml:base="http://localhost:4000/2020/03/26/%E9%BB%91%E6%9E%9C%E7%9A%84%E8%93%9D%E7%89%99%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88.html">&lt;h3 id=&quot;驱动brcm-蓝牙的解决方案&quot;&gt;驱动BRCM 蓝牙的解决方案&lt;/h3&gt;
+
+&lt;p&gt;（具体解决方案见https://github.com/acidanthera/BrcmPatchRAM，如下是搬运工）一般使用BrcmPatchRAM/2和BrcmFirmwareRepo/Data配合解决，依次按照如下顺序处理&lt;/p&gt;
+
+&lt;h4 id=&quot;注入器根据自己系统版本选择安装&quot;&gt;注入器，（根据自己系统版本选择安装）&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;BrcmPatchRAM.kext: 10.10及更早版本，安装到 Library/Extensions&lt;/li&gt;
+  &lt;li&gt;BrcmPatchRAM2.kext: 10.11及后续版本（10.15应该也可用），安装到 /System/Library/Extensions&lt;/li&gt;
+  &lt;li&gt;BrcmPatchRAM3.kext：10.15 ，安装到 /System/Library/Extensions&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;注入器数据包如下两个只选一个安装不能同时&quot;&gt;注入器数据包（如下两个只选一个安装，不能同时）&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;BrcmFirmwareRepo.kext: 安装在 /System/Library/Extensions&lt;/li&gt;
+  &lt;li&gt;或者BrcmFirmwareData.kext: 安装在 EFI/Clover/kexts（推荐方式）&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;特别针对1015版本需要在clover中加载brcmbluetoothinjectorkext&quot;&gt;特别针对10.15版本，需要在clover中加载BrcmBluetoothInjector.kext&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;因为10.15框架改变，需要配合clover中注入BrcmBluetoothInjector.kext使用（EFI/Clover/kexts）。&lt;/li&gt;
+  &lt;li&gt;10.15之前的版本，不需要此步骤。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;因为我的系统是10153所以我使用的方法是&quot;&gt;因为我的系统是10.15.3，所以我使用的方法是：&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;用kextwizard软件把BrcmPatchRAM3.kext和BrcmFirmwareRepo.kext安装到/System/Library/Extensions&lt;/li&gt;
+  &lt;li&gt;把BrcmBluetoothInjector.kext拷贝到引导磁盘的EFI/Clover/kexts/other文件夹中。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!--more--&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;喜欢欢迎加我微信一起讨论。&lt;/p&gt;</content><author><name>Your Name</name></author><category term="黑果" /><summary type="html">驱动BRCM 蓝牙的解决方案 （具体解决方案见https://github.com/acidanthera/BrcmPatchRAM，如下是搬运工）一般使用BrcmPatchRAM/2和BrcmFirmwareRepo/Data配合解决，依次按照如下顺序处理 注入器，（根据自己系统版本选择安装） BrcmPatchRAM.kext: 10.10及更早版本，安装到 Library/Extensions BrcmPatchRAM2.kext: 10.11及后续版本（10.15应该也可用），安装到 /System/Library/Extensions BrcmPatchRAM3.kext：10.15 ，安装到 /System/Library/Extensions 注入器数据包（如下两个只选一个安装，不能同时） BrcmFirmwareRepo.kext: 安装在 /System/Library/Extensions 或者BrcmFirmwareData.kext: 安装在 EFI/Clover/kexts（推荐方式） 特别针对10.15版本，需要在clover中加载BrcmBluetoothInjector.kext 因为10.15框架改变，需要配合clover中注入BrcmBluetoothInjector.kext使用（EFI/Clover/kexts）。 10.15之前的版本，不需要此步骤。 因为我的系统是10.15.3，所以我使用的方法是： 用kextwizard软件把BrcmPatchRAM3.kext和BrcmFirmwareRepo.kext安装到/System/Library/Extensions 把BrcmBluetoothInjector.kext拷贝到引导磁盘的EFI/Clover/kexts/other文件夹中。</summary></entry><entry><title type="html">Welcome</title><link href="http://localhost:4000/2018/07/01/welcome.html" rel="alternate" type="text/html" title="Welcome" /><published>2018-07-01T00:00:00+08:00</published><updated>2018-07-01T00:00:00+08:00</updated><id>http://localhost:4000/2018/07/01/welcome</id><content type="html" xml:base="http://localhost:4000/2018/07/01/welcome.html">&lt;p&gt;If you see this page, that means you have setup your site. enjoy! :ghost: :ghost: :ghost:&lt;/p&gt;
+
+&lt;p&gt;You may want to &lt;a href=&quot;https://tianqi.name/jekyll-TeXt-theme/docs/en/configuration&quot;&gt;config the site&lt;/a&gt; or &lt;a href=&quot;https://tianqi.name/jekyll-TeXt-theme/docs/en/writing-posts&quot;&gt;writing a post&lt;/a&gt; next. Please feel free to &lt;a href=&quot;https://github.com/kitian616/jekyll-TeXt-theme/issues&quot;&gt;create an issue&lt;/a&gt; or &lt;a href=&quot;mailto:kitian616@outlook.com&quot;&gt;send me email&lt;/a&gt; if you have any questions.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;If you like TeXt, don’t forget to give me a star. :star2:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/kitian616/jekyll-TeXt-theme/&quot;&gt;&lt;img src=&quot;https://img.shields.io/github/stars/kitian616/jekyll-TeXt-theme.svg?label=Stars&amp;amp;style=social&quot; alt=&quot;Star This Project&quot; /&gt;&lt;/a&gt;&lt;/p&gt;</content><author><name>Your Name</name></author><category term="TeXt" /><summary type="html">If you see this page, that means you have setup your site. enjoy! :ghost: :ghost: :ghost: You may want to config the site or writing a post next. Please feel free to create an issue or send me email if you have any questions.</summary></entry><entry><title type="html">Post with Header Image</title><link href="http://localhost:4000/2018/06/01/header-image.html" rel="alternate" type="text/html" title="Post with Header Image" /><published>2018-06-01T00:00:00+08:00</published><updated>2018-06-01T00:00:00+08:00</updated><id>http://localhost:4000/2018/06/01/header-image</id><content type="html" xml:base="http://localhost:4000/2018/06/01/header-image.html">&lt;p&gt;A Post with Header Image, See &lt;a href=&quot;https://tianqi.name/jekyll-TeXt-theme/samples.html#page-layout&quot;&gt;Page layout&lt;/a&gt; for more examples.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;测试显示什么内容。&lt;/p&gt;</content><author><name>Your Name</name></author><category term="TeXt" /><summary type="html">A Post with Header Image, See Page layout for more examples.</summary></entry></feed>
