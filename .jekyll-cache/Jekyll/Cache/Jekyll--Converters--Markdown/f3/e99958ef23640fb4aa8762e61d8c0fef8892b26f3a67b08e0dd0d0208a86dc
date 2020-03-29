@@ -1,0 +1,16 @@
+I"�<h3 id="mac-os-10153-无法删除根目录文件的处理方法">Mac OS 10.15.3 无法删除根目录文件的处理方法</h3>
+
+<h4 id="不能删除原因">不能删除原因</h4>
+<p>主要原因是升级为Catalina系统后，很多文件或者应用写权限被锁，且有一个系统保护，SIP（system integrity protection）。</p>
+
+<h4 id="解决方案">解决方案</h4>
+<p>解决方法如下：</p>
+<ol>
+  <li>开启root账户，设定root账户密码，方法自行百度。</li>
+  <li>进入到急救模式，在“实用工具”中的“终端”中输入 命令：csrutil disable。此命令用于解除系统保护，SIP（system integrity protection）。</li>
+  <li>正常启动进入root账户，终端中输入命令：sudo mount -uw /。此命令用于解除全盘文件的写保护权限。</li>
+  <li>直接在终端通过命令：rm -rf ，此命令可以删除文件及文件夹。</li>
+  <li>重启后系统会自动恢复原来的保护状态，若不需要，可以再把root账户删掉。 </li>
+  <li>有个ppleinternal的文件夹，实在不知道干嘛的，还删不掉。可以终端输入sudo chflags hidden /AppleInternal来隐藏它。</li>
+</ol>
+:ET
