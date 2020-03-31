@@ -1,0 +1,18 @@
+I"�
+<h4 id="修改启动台的图标单页显示数量">修改启动台的图标单页显示数量</h4>
+<p>终端中：</p>
+<ol>
+  <li>输入命令：<code class="highlighter-rouge">defaults write com.apple.dock springboard-rows -int 7</code>，横轴调整启动图标数量为7。</li>
+  <li><code class="highlighter-rouge">defaults write com.apple.dock springboard-columns -int 11</code>，纵数图标数量11。</li>
+  <li><code class="highlighter-rouge">defaults write com.apple.dock ResetLaunchPad -bool TRUE</code></li>
+  <li><code class="highlighter-rouge">killall Dock</code>重启生效。</li>
+  <li>若要恢复，那么重复命令，输入原来的图标数目。</li>
+</ol>
+
+<h4 id="git-fatal-您当前不在一个分支上">git fatal: 您当前不在一个分支上。</h4>
+<ol>
+  <li>确认一下当前在哪个分支上：<code class="highlighter-rouge">git branch</code>。</li>
+  <li>可能需要保存修改：<code class="highlighter-rouge">git commit -m "调整注释涉及到的文件"</code></li>
+  <li>确定是头指针分离，然后切换回主分支即可，切换操作：<code class="highlighter-rouge">git checkout master</code></li>
+</ol>
+:ET
