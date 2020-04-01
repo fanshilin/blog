@@ -1,0 +1,213 @@
+I"�!<h4 id="macos启动台修改图标单页显示数量">MacOS启动台修改图标单页显示数量</h4>
+<p>终端中：</p>
+<ol>
+  <li>输入命令：<code class="highlighter-rouge">defaults write com.apple.dock springboard-rows -int 7</code>，横轴调整启动图标数量为7。</li>
+  <li><code class="highlighter-rouge">defaults write com.apple.dock springboard-columns -int 11</code>，纵数图标数量11。</li>
+  <li><code class="highlighter-rouge">defaults write com.apple.dock ResetLaunchPad -bool TRUE</code></li>
+  <li><code class="highlighter-rouge">killall Dock</code>重启生效。</li>
+  <li>若要恢复，那么重复命令，输入原来的图标数目。</li>
+</ol>
+
+<h4 id="git-fatal-您当前不在一个分支上">git fatal: 您当前不在一个分支上。</h4>
+<ol>
+  <li>确认一下当前在哪个分支上：<code class="highlighter-rouge">git branch</code>。</li>
+  <li>可能需要保存修改：<code class="highlighter-rouge">git commit -m "调整注释涉及到的文件"</code></li>
+  <li>确定是头指针分离，然后切换回主分支即可，切换操作：<code class="highlighter-rouge">git checkout master</code></li>
+</ol>
+
+<h4 id="git全局大小写敏感设置">git全局大小写敏感设置</h4>
+<p>执行<code class="highlighter-rouge">git config --global core.ignorecase false</code>，全局设置<strong>大小写敏感</strong> 。</p>
+
+<h4 id="键盘实现文件夹移动快捷键">键盘实现文件夹移动快捷键</h4>
+<p>选择你需要移动的文件后，按下键盘的Command+C，然后在目的目录下按下Command+Option+V，就实现了文件移动。</p>
+
+<h4 id="键盘显示桌面">键盘显示桌面</h4>
+<p>组合键：Fn+F11</p>
+
+<h4 id="将所选项目放进新建文件夹中">将所选项目放进新建文件夹中</h4>
+<p>「用所选项目新建文件夹」：一次选中多个文件后激活辅助点按（鼠标右键，下同）后，可以在下拉菜单中选择该选项，会自动在当前目录或用户目录下新建一个文件夹，并将选中的文件自动移动至该文件夹内。</p>
+
+<h4 id="系统的截屏功能">系统的截屏功能</h4>
+<ol>
+  <li>按下「Shift」+「Command」+「3」将会截取整个屏幕并储存到桌面。</li>
+  <li>按下「Shift」+「Command」+「4」既可框选屏幕部分并储存到桌面。</li>
+  <li>在此基础上按下「空格」可以直接选取某一窗口截取并储存到桌面。</li>
+  <li>同样在上述的基础上按住「Shift」可以固定选框的长或宽，按住「Option」将会对称地放大或缩小选框。</li>
+</ol>
+
+<p>Mac OS 常用快捷键
+为了体验Mac系统带来的快速Web开发，砸金刚买了Macbook Air电脑，对于用惯Windows的程序员来说，新电脑上手必须快捷键走起，要不然就好像法拉利走在北京街道上，有劲用不上呀。对于职场人士来说，会了快捷键，不仅显得高大上，而且事半功倍。</p>
+
+<p>以下内容可能乍一看特别头大，不过仔细看一下会发现所有操作都是有规律可循的，掌握之后会大大提升工作效率，瞬间速度70迈^_^!</p>
+
+<p>基本快捷键
+Command 是 Mac 里最重要的修饰键，在大多数情况下相当于 Windows 下的 Ctrl。所以以下最基本操作很好理解：</p>
+
+<p>Command-C 拷贝（Copy）</p>
+
+<p>Command-V 粘贴</p>
+
+<p>Command-X 剪切</p>
+
+<p>Command-Z 撤销</p>
+
+<p>Command-A 全选（All）</p>
+
+<p>Command-S 保存（Save)</p>
+
+<p>Command-F 查找（Find）</p>
+
+<p>Command-Tab 切换窗口</p>
+
+<p>Command-W 关闭当前窗口</p>
+
+<p>因为小编经常编辑一些文本，所以以下功能必是常备快键。</p>
+
+<p>截图</p>
+
+<p>Command-Shift-3 截取全部屏幕到文件</p>
+
+<p>Command-Shift-Control-3 截取全部屏幕到剪贴板</p>
+
+<p>Command-Shift-4 截取所选屏幕区域到一个文件，或按空格键仅捕捉一个窗口</p>
+
+<p>Command-Shift-Control-4 截取所选屏幕区域到剪贴板，或按空格键仅捕捉一个窗口</p>
+
+<h4 id="文本编辑">文本编辑</h4>
+
+<p>Command-右箭头 将光标移至当前行的行尾</p>
+
+<p>Command-左箭头 将光标移至当前行的行首</p>
+
+<p>Command-下箭头 将光标移至文稿末尾</p>
+
+<p>Command-上箭头 将光标移至文稿开头</p>
+
+<h4 id="以上快捷键中加入shift可扩展为选中文本效果">以上快捷键中加入Shift，可扩展为选中文本效果：</h4>
+
+<p>Shift+Command-右箭头 选中光标到本行末尾的文本</p>
+
+<p>Shift+Command-左箭头 选中光标到本行开头的文本</p>
+
+<p>以下两个可以Command-A 全选（All）</p>
+
+<p>Shift+Command-下箭头 选中光标到全部文本的末尾</p>
+
+<p>Shift+Command-上箭头 选中光标到全部文本的开头</p>
+
+<p>Command-B 切换所选文字粗体（Bold）显示</p>
+
+<p>Control-A 移至行或段落的开头</p>
+
+<p>Option-右箭头 将光标移至下一个单词的末尾</p>
+
+<p>Option-左箭头 将光标移至上一个单词的开头</p>
+
+<h4 id="backspacepguppgdn等键没有怎么办">Backspace,PgUp,PgDn等键没有怎么办</h4>
+
+<p>以上按键Mac键盘上没有，可以通过以下方式：</p>
+
+<p>fn-Delete 相当于PC全尺寸键盘上的Delete，也就是向后删除</p>
+
+<p>fn-上箭头 向上滚动一页（Page Up）</p>
+
+<p>fn-下箭头 向下滚动一页（Page Down）</p>
+
+<p>fn-左箭头 滚动至文稿开头（Home）</p>
+
+<p>fn-右箭头 滚动至文稿末尾（End）</p>
+
+<p>Command-R 刷新，类似WindowsF5</p>
+
+<h4 id="操作应用程序">操作应用程序</h4>
+
+<p>工作时，为了集中注意力，我们通常会打开多个窗口，作业时只显示一个窗口，其它隐藏。这时候最大化窗口、隐藏窗口、打开窗口等会经常用到。</p>
+
+<p>Command+option+command+h+m  一次性隐藏和最小化所有窗口</p>
+
+<p>Command-Option-H 隐藏（Hide）其他应用程序窗口</p>
+
+<p>Command+H  隐藏（Hide，最小化）当前正在运行的应用程序窗口</p>
+
+<p>command+m   最小化当前窗口</p>
+
+<p>control +command+f  窗口全屏，最大化</p>
+
+<p>Command-Q 退出（Quit）最前面的应用程序</p>
+
+<p>Command-Shift-Z 重做，也就是撤销的逆向操作</p>
+
+<p>Command-Option-esc 打开“强制退出”窗口，如果有应用程序无响应，可在窗口列表中选择强制退出)</p>
+
+<h4 id="finder使用">Finder使用</h4>
+
+<p>在Windows中因为有资源管理器可以快速的进入文件路径磁盘，Mac的Finder类似资源管理器（explorer）。</p>
+
+<p>Command-O 打开所选项。在Mac里打开文件不像Windows里直接按Enter</p>
+
+<p>Command-Shift-G 调出窗口，可输入绝对路径直达文件夹（Go）</p>
+
+<p>Command-Shift-N 新建文件夹（New）</p>
+
+<p>return 这个其实不算快捷键，点击文件，按下可重命名文件</p>
+
+<p>Command-Option-V 作用相当于Windows里的文件剪切。在其它位置上对文件复制（Command-C），在目的位置按下这个快捷键，文件将被剪切到此位置</p>
+
+<p>Command-上箭头 打开包含当前文件夹的文件夹，相当于Windows里的“向上”</p>
+
+<p>Command-Delete 将文件移至废纸篓</p>
+
+<p>Command-Shift-Delete 清倒废纸篓</p>
+
+<p>空格键 快速查看选中的文件，也就是预览功能</p>
+
+<h5 id="在finder标题栏显示当前文件夹路径">在Finder标题栏显示当前文件夹路径</h5>
+<p>打开“终端”（应用程序-&gt;实用工具），输入以下两条命令：</p>
+
+<p>defaults write com.apple.finder _FXShowPosixPathInTitle -bool TRUE;</p>
+
+<p>killall Finder</p>
+
+<h5 id="恢复默认状态">恢复默认状态：</h5>
+
+<p>打开“终端”（应用程序-&gt;实用工具），输入以下两条命令：</p>
+
+<p>defaults delete com.apple.finder _FXShowPosixPathInTitle;</p>
+
+<p>killall Finder</p>
+
+<p>如果只是想在Finder中看到文件的路径, 并方便切换层级, Finder内置了「显示路径栏」的功能, 并配置了快捷键(Option+Cmd+P).</p>
+
+<h4 id="safari浏览器的使用">Safari浏览器的使用</h4>
+<p>Command-L 光标直接跳至地址栏</p>
+
+<p>Control-Tab 转向下一个标签页</p>
+
+<p>Control-Shift-Tab 转向上一个标签页</p>
+
+<p>Command-Shift-加号或等号 放大页面</p>
+
+<p>Command-减号 缩小页面</p>
+
+<p>Command-R 刷新页面</p>
+
+<p>Command-W 关闭当前页面</p>
+
+<h4 id="快速显示桌面">快速显示桌面</h4>
+
+<p>Windows中可以Win＋D</p>
+
+<p>Mac可以通过以下几种方式</p>
+
+<p>1.四指划开</p>
+
+<p>2.Command＋F3</p>
+
+<p>3.通过设置边缘角</p>
+
+<h4 id="强制退出">强制退出</h4>
+<p>程序无响应，强制退出时</p>
+
+<p>Command-Option-Esc</p>
+
+:ET

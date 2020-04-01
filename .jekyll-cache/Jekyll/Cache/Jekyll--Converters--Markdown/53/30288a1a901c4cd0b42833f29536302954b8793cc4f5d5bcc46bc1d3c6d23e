@@ -1,4 +1,4 @@
-I"�<h4 id="修改启动台的图标单页显示数量">修改启动台的图标单页显示数量</h4>
+I"�<h4 id="macos启动台修改图标单页显示数量">MacOS启动台修改图标单页显示数量</h4>
 <p>终端中：</p>
 <ol>
   <li>输入命令：<code class="highlighter-rouge">defaults write com.apple.dock springboard-rows -int 7</code>，横轴调整启动图标数量为7。</li>
@@ -14,4 +14,12 @@
   <li>可能需要保存修改：<code class="highlighter-rouge">git commit -m "调整注释涉及到的文件"</code></li>
   <li>确定是头指针分离，然后切换回主分支即可，切换操作：<code class="highlighter-rouge">git checkout master</code></li>
 </ol>
+
+<h4 id="git全局大小写敏感设置">git全局大小写敏感设置</h4>
+<p>执行<code class="highlighter-rouge">git config --global core.ignorecase false</code>，全局设置<strong>大小写敏感</strong> 。</p>
+
+<h4 id="键盘实现文件夹移动快捷键">键盘实现文件夹移动快捷键</h4>
+<p>选择你需要移动的文件后，按下键盘的Command+C，然后在目的目录下按下Command+Option+V，就实现了文件移动。</p>
+<h4 id="键盘显示桌面">键盘显示桌面</h4>
+<p>组合键：Fn+F11</p>
 :ET
