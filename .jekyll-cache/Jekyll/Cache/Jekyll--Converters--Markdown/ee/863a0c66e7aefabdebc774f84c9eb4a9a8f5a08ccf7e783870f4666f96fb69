@@ -1,0 +1,52 @@
+I"<h2 id="记录博客在github上线的全部折腾流程">记录博客在github上线的全部折腾流程</h2>
+
+<h3 id="本地安装jekyll">本地安装jekyll</h3>
+<p>主要参考<a href="http://jekyll.com.cn/">Jekyll</a>的官网。</p>
+<ol>
+  <li>按照教程，应该先安装Ruby环境，但是我的系统是mac os 10.15.3，已经默认集成了Ruby环境。安装命令：<code class="highlighter-rouge">/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"</code>，<code class="highlighter-rouge">brew install ruby</code></li>
+  <li>安装 Jekyll 和 bundler gems。<code class="highlighter-rouge">gem install jekyll bundler</code></li>
+  <li>在自己喜欢的位置，创建一个全新的 Jekyll 网站.<code class="highlighter-rouge">jekyll new myblog</code></li>
+  <li>进入新创建的目录。<code class="highlighter-rouge">cd myblog</code></li>
+  <li>构建网站并启动一个本地服务器。<code class="highlighter-rouge">bundle exec jekyll serve</code></li>
+  <li>在浏览器中打开 <code class="highlighter-rouge">http://localhost:4000</code> 网址</li>
+</ol>
+
+<h3 id="本地安装git">本地安装git</h3>
+<p>通过homebrew安装Git。</p>
+<ol>
+  <li>未安装homebrew，需安装homebrew。<code class="highlighter-rouge">/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"</code></li>
+  <li>安装git。<code class="highlighter-rouge">brew install git</code>
+    <h3 id="github上建一个博客空间">github上建一个博客空间</h3>
+    <p>github上自己注册创建。</p>
+  </li>
+</ol>
+
+<h3 id="创建ssh-key配置git">创建ssh key、配置git</h3>
+<ol>
+  <li>设置username和email（github每次commit都会记录他们）<code class="highlighter-rouge">git config --global user.name "wenbo"</code><code class="highlighter-rouge">git config --global user.email "1050794513@qq.com"</code></li>
+  <li>通过终端命令创建ssh key.<code class="highlighter-rouge">ssh-keygen -t rsa -C "283587493@qq.com"</code>。期间会让输入私钥密码啥的，要记牢。公钥最好用默认路径，否则可能导致后边无法与git通讯，还要调路径，麻烦。</li>
+  <li>终端查看.ssh/id_rsa.pub文件.<code class="highlighter-rouge">open .ssh/id_rsa.pub </code>回车后，就会新弹出一个终端，然后复制里面的key（所有文字）。或者用cat命令查看<code class="highlighter-rouge">cat .ssh/id_rsa.pub</code>。</li>
+  <li>登录GitHub（默认你已经注册了GitHub账号），添加ssh key，点击Settings-&gt;New ssh key。</li>
+  <li>链接验证。<code class="highlighter-rouge">ssh -T git@github.com </code>如果成功，会出现类似结果。</li>
+</ol>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>fanshilin@fanshilindeiMac ~ % ssh -T git@github.com 
+Enter passphrase for key '/Users/fanshilin/.ssh/id_rsa': 
+Hi fanshilin! You've successfully authenticated, but GitHub does not provide shell access.
+</code></pre></div></div>
+
+<h3 id="提交本地项目到github">提交本地项目到GitHub</h3>
+<ol>
+  <li>Clone工程到本地，首先复制ssh 地址。<code class="highlighter-rouge">cd /Users/fanshilin</code>，<code class="highlighter-rouge">git clone git@github.com:fanshilin/blog.git</code>。其中<code class="highlighter-rouge">git@github.com:fanshilin/blog.git</code>是刚才复制的ssh地址。</li>
+  <li>提交修改，首先切换到LearnGit文件路径：<code class="highlighter-rouge">cd /Users/fanshilin/blog</code>，然后输入：</li>
+</ol>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>//文件添加到仓库（.代表提交所有文件）
+git add .
+//把文件提交到仓库
+git commit -m "First Commit"
+//上传到github
+git push
+</code></pre></div></div>
+
+:ET
