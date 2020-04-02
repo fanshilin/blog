@@ -1,0 +1,13 @@
+I"�<h1 id="黑果升级系统至10154导致声卡无法驱动">黑果升级系统至10.15.4导致声卡无法驱动</h1>
+
+<h2 id="applealckext无法成功驱动">AppleALc.kext无法成功驱动</h2>
+<p>尝试用AppleALc.kext驱动，试过所有layout id，均未能驱动。</p>
+
+<h2 id="v00d00hda292无法成功驱动">V00d00HDA2.9.2无法成功驱动</h2>
+<p>安装V00d00HDA2.9.2clover-V15，方式采用第三种方式，直接安装到系统，并屏蔽系统的自带驱动。</p>
+<ul>
+  <li>Install ➤ VoodooHDA.kext, AppleHDADisabler.kext /System/Library/Extensions</li>
+  <li>Install ➤ VoodooHDA.prefPane /Library/PreferencePanes</li>
+  <li>Install ➤ getdump /usr/local/bin/getdump BackUp ➤ Origin /Desktop/AppleHDA.kext</li>
+</ul>
+:ET

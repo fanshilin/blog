@@ -1,0 +1,38 @@
+I"�<h1 id="驱动brcm-蓝牙的解决方案">驱动BRCM 蓝牙的解决方案</h1>
+
+<p>（具体解决方案见https://github.com/acidanthera/BrcmPatchRAM，如下是搬运工）一般使用BrcmPatchRAM/2和BrcmFirmwareRepo/Data配合解决，依次按照如下顺序处理</p>
+
+<h2 id="注入器根据自己系统版本选择安装">注入器，（根据自己系统版本选择安装）</h2>
+
+<ul>
+  <li>BrcmPatchRAM.kext: 10.10及更早版本，安装到 Library/Extensions</li>
+  <li>BrcmPatchRAM2.kext: 10.11及后续版本（10.15应该也可用），安装到 /System/Library/Extensions</li>
+  <li>BrcmPatchRAM3.kext：10.15 ，安装到 /System/Library/Extensions</li>
+</ul>
+
+<h2 id="注入器数据包如下两个只选一个安装不能同时">注入器数据包（如下两个只选一个安装，不能同时）</h2>
+
+<ul>
+  <li>BrcmFirmwareRepo.kext: 安装在 /System/Library/Extensions</li>
+  <li>或者BrcmFirmwareData.kext: 安装在 EFI/Clover/kexts（推荐方式）</li>
+</ul>
+
+<h2 id="特别针对1015版本需要在clover中加载brcmbluetoothinjectorkext">特别针对10.15版本，需要在clover中加载BrcmBluetoothInjector.kext</h2>
+
+<ul>
+  <li>因为10.15框架改变，需要配合clover中注入BrcmBluetoothInjector.kext使用（EFI/Clover/kexts）。</li>
+  <li>10.15之前的版本，不需要此步骤。</li>
+</ul>
+
+<h2 id="因为我的系统是10153所以我使用的方法是">因为我的系统是10.15.3，所以我使用的方法是：</h2>
+<ul>
+  <li>用kextwizard软件把BrcmPatchRAM3.kext和BrcmFirmwareRepo.kext安装到/System/Library/Extensions</li>
+  <li>把BrcmBluetoothInjector.kext拷贝到引导磁盘的EFI/Clover/kexts/other文件夹中。</li>
+</ul>
+
+<!--more-->
+
+<hr />
+
+<p>喜欢欢迎加我微信一起讨论。</p>
+:ET
