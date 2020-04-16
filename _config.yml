@@ -22,7 +22,7 @@ url     : blog # the base hostname & protocol for your site e.g. https://www.som
 baseurl :  # does not include hostname
 title   : 乱七八糟一堆事
 description: > # this means to ignore newlines until "Language & timezone"
-  Your Site Description
+  想到什么记什么的一个地方
 ## => Language and Timezone
 ##############################
 lang: # the language of your site, default as "en"
@@ -37,7 +37,7 @@ author:
   url       :
   avatar    : # path or url of avatar image (square)
   bio       : I am an amazing person.
-  email     :
+  email     : 283587493@qq.com
   facebook  : # "user_name" the last part of your profile url, e.g. https://www.facebook.com/user_name
   twitter   : # "user_name" the last part of your profile url, e.g. https://twitter.com/user_name
   weibo     : # "user_id"   the last part of your profile url, e.g. https://www.weibo.com/user_id/profile?...
@@ -53,7 +53,7 @@ author:
 
 ## => GitHub Repository (if the site is hosted by GitHub)
 ##############################
-repository: user_name/repo_name
+repository: fanshilin/blog
 repository_tree: master
 
 
