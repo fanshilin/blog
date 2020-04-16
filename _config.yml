@@ -1,30 +1,3 @@
-Skip to content
-Search or jump to…
-
-Pull requests
-Issues
-Marketplace
-Explore
- 
-@fanshilin 
-Learn Git and GitHub without any code!
-Using the Hello World guide, you’ll start a branch, write comments, and open a pull request.
-
-
-fanshilin
-/
-blog
-1
-00
- Code Issues 0 Pull requests 1 Actions Projects 0 Wiki Security Insights Settings
-blog/_config.yml
-@fanshilin fanshilin 更新_config.yml配置文件
-db05487 18 days ago
-We found potential security vulnerabilities in your dependencies.
-Only the owner of this repository can see this message.
-
-225 lines (178 sloc)  6.19 KB
-  
 # Welcome to Jekyll!
 #
 # This config file is meant for settings that affect your whole blog, values
